@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const CreateTweet = ({ tweets, setTweets, textInput, setTextInput }) => {
   // Functions
@@ -8,7 +9,7 @@ const CreateTweet = ({ tweets, setTweets, textInput, setTextInput }) => {
 
   const submitTweetHandler = (e) => {
     e.preventDefault();
-    setTweets([...tweets, textInput]);
+    setTweets([...tweets, { message: textInput, id: uuidv4() }]);
     // Spread operator -> save old value, add new value
     setTextInput("");
   };

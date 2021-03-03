@@ -25,7 +25,7 @@ function App() {
         tweets={tweets}
         setTweets={setTweets}
       />
-      <TweetList name={name} tweets={tweets} />
+      <TweetList name={name} tweets={tweets} setTweets={setTweets} />
       {/* Component propName={propValue} 
         - we can pass variableSetter and functions as a props too  */}
       <h1>Hello {devName}</h1>

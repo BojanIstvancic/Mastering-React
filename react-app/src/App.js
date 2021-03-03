@@ -7,7 +7,7 @@ import TweetList from "./components/TweetList";
 function App() {
   const name = "Bokisa";
   // State
-  const [devName, setDevName] = useState("HTML CSS Boxton");
+  const [devName, setDevName] = useState("Heading");
   // [ variableName, variableSetter] = useState('Default Value)
   const [textInput, setTextInput] = useState("");
   const [tweets, setTweets] = useState([]);
@@ -23,12 +23,12 @@ function App() {
   */
 
   const sayHelloHandler = () => {
-    setDevName("Boxton React Boxton");
+    setDevName("Custom Heading");
   };
 
   return (
     <div>
-      <h1>App Component</h1>
+      <h1>Create Tweet</h1>
       <CreateTweet
         textInput={textInput}
         setTextInput={setTextInput}
@@ -38,8 +38,8 @@ function App() {
       <TweetList name={name} tweets={tweets} setTweets={setTweets} />
       {/* Component propName={propValue} 
         - we can pass variableSetter and functions as a props too  */}
-      <h1>Hello {devName}</h1>
-      <button onClick={sayHelloHandler}>Click</button>
+      <h1>{devName}</h1>
+      <button onClick={sayHelloHandler}>Update Heading</button>
     </div>
   );
 }

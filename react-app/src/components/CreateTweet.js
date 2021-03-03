@@ -1,5 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
+import styled from "styled-components";
 
 const CreateTweet = ({ tweets, setTweets, textInput, setTextInput }) => {
   // Functions
@@ -22,9 +23,15 @@ const CreateTweet = ({ tweets, setTweets, textInput, setTextInput }) => {
         cols="50"
         rows="5"
       ></textarea>
-      <button>Submit</button>
+      <br />
+      <Button primary>Submit</Button>
     </form>
   );
 };
+
+const Button = styled.button`
+  background-color: ${(props) => (props.primary ? "tomato" : "green")};
+  color: white;
+`;
 
 export default CreateTweet;

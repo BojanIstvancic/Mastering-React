@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Tweet.scss";
 
 const Tweet = ({ name, tweet, setTweets, tweets }) => {
   const deleteTweet = () => {
